@@ -1,0 +1,263 @@
+@use "_mixin" as m;
+$font-poppins: "Poppins", sans-serif;
+
+body {
+  font-family: $font-poppins;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1268px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header {
+  &-inner {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m.breakpoint(lg) {
+    }
+  }
+  &-inner > * {
+    flex: 1;
+  }
+  &-items {
+    display: none;
+
+    @include m.breakpoint(lg) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &-items > * {
+    margin-left: 37px;
+  }
+}
+.button-mobile {
+  text-align: right;
+  display: inline-block;
+  @include m.breakpoint(lg) {
+    display: none;
+  }
+}
+.main-menu {
+  display: none;
+  @include m.breakpoint(lg) {
+    display: block;
+  }
+  &__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include m.breakpoint(lg) {
+      display: flex;
+    }
+  }
+  &__item {
+  }
+  &__link {
+    font-size: 18px;
+    display: block;
+    padding: 10px 35px;
+    text-decoration: none;
+    color: #000;
+  }
+  &__link:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.containerr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  
+}
+.left-column{
+    margin-left: 80px;
+}
+
+.name-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 30px;
+  
+}
+
+.first-name {
+  display: block;
+}
+
+.last-name {
+  display: block;
+}
+.span-name {
+  display: block;
+  margin-bottom: 5px;
+}
+.btn-name {
+  display: block;
+  width: 150px;
+  height: 55px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.company {
+  display: block;
+  margin-top: 20px;
+}
+
+.btn-namee {
+  display: block;
+  width: 490px;
+  height: 55px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.right-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 70px;
+}
+
+.first-namee {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.para {
+  margin: 30px;
+}
+.last-namee {
+  display: block;
+}
+
+.hera {
+  margin: 30px;
+}
+
+.dir {
+  display: flex;
+  align-items: center;
+}
+.btn-dir {
+  border: 1px solid #9f9f9f;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px;
+
+}
+.btn-numberr{
+display: flex;
+justify-content: center;
+padding: 30px ;
+
+}
+.btn-text{
+     background-color: white;
+    border: 1px solid black;
+    width: 230px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.footer {
+  padding: 39px 0;
+  &-list {
+    @include m.grid(1, 30px);
+
+    @include m.breakpoint(lg) {
+      @include m.grid(3, 30px);
+    }
+  }
+  &__address {
+    color: #9f9f9f;
+  }
+  &-nav {
+    @include m.grid(2, 30px);
+  }
+  &__title {
+    font-size: 16px;
+    color: #9f9f9f;
+    font-weight: normal;
+    margin-bottom: 59px;
+  }
+  &-menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &-menu-item {
+    margin-bottom: 20px;
+  }
+  &-menu-link {
+    text-decoration: none;
+    color: #000;
+  }
+}
+.service-list {
+  margin-top: 40px;
+  background: #faf3ea;
+  padding: 10% 15px 10% 15px;
+  @include m.grid(2, 30px);
+  @include m.breakpoint(lg) {
+    @include m.grid(4, 30px);
+    padding: 107px 10% 93px 10%;
+  }
+  .service-item {
+    display: block;
+    text-align: center;
+    @include m.breakpoint(sm) {
+      display: grid;
+      grid-template-columns: 60px auto;
+      grid-gap: 10px;
+      text-align: left;
+    }
+  }
+  .service__name {
+    font-size: 25px;
+    color: #242424;
+    margin: 0;
+  }
+  .service__description {
+    color: #898989;
+    margin-top: 10px;
+  }
+}
+.newsletter {
+  &__input {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #000;
+    padding: 5px 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #000;
+    padding: 5px 10px;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+.section-blog-heading {
+  margin-bottom: 66px;
+}
